@@ -1,0 +1,11 @@
+.todo-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.strike {
+    text-decoration: line-through;
+}
+.bold{
+    font-weight: 700;
+}
