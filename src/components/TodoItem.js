@@ -1,10 +1,13 @@
 import React from "react";
-import "./TodoItem.css";
+import Deleteicon from "../media/Delete.icon";
+
+import "./TodoItem.scss";
 
 import { useDispatch } from "react-redux";
 import { deleteTodo, setCheck } from "../features/todoSlice";
 
 const TodoItem = ({ props }) => {
+  let res;
   const dispatch = useDispatch();
   const { item, done, id } = props;
 
@@ -18,11 +21,14 @@ const TodoItem = ({ props }) => {
 
   return (
     <div className="todo-item">
-      <input type="checkbox" checked={done} id={id} onChange={handleCheck} />
-      <label className={done ? "strike" : "bold"} for={id} >{item}</label>
+      <label className={done ? "check strike" : "check bold"} htmlFor={id}>
+        <input type="checkbox" checked={done} id={id} className="inputBox" onChange={handleCheck} />
+        {item}
+      </label>
       <button type="checkbox" onClick={deleteIt}>
-        delete
+        <Deleteicon />
       </button>
+      {/* <span>{res}</span> */}
     </div>
   );
 };

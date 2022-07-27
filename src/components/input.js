@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { saveTodo } from "../features/todoSlice";
 
-import "./input.css";
+import "./input.scss";
 const Input = () => {
   const [input, setInput] = useState("");
-  const [nothing, setNothing] = useState("");
+  const [nothing, setNothing] = useState("Enter a ToDo");
   const dispatch = useDispatch();
 
   const setVal = (e) => {
@@ -26,7 +26,7 @@ const Input = () => {
         })
       );
       setInput("");
-      setNothing("");
+      setNothing("Enter a ToDo");
     }
   };
 
