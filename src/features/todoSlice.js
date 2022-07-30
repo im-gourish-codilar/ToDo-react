@@ -4,7 +4,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   todoList: [],
-  err: false,
 };
 
 const todoSlice = createSlice({
@@ -13,14 +12,12 @@ const todoSlice = createSlice({
   reducers: {
     saveTodo: (state, action) => {
       state.todoList.push(action.payload);
-      state.err = false;
     },
 
     setCheck: (state, action) => {
       state.todoList.map((item) => {
         if (action.payload === item.id) {
           item.done = !item.done;
-          state.err = false;
         }
       });
     },
@@ -33,16 +30,24 @@ const todoSlice = createSlice({
               (item) => item.id !== action.payload
             );
           } else {
-            state.err = !state.err;
+            item.err = !item.err;
           }
         }
-        return "its not Done"
+      });
+    },
+
+    hideNotification: (state,action) => {
+      state.todoList.map((item) => {
+        if (action.payload === item.id) {
+          item.err = false
+        }
       });
     },
   },
 });
 
-export const { saveTodo, setCheck, deleteTodo } = todoSlice.actions;
+export const { saveTodo, setCheck, deleteTodo, hideNotification } =
+  todoSlice.actions;
 
 export const selectTodosList = (state) => state.todos.todoList;
 export const notifyer = (state) => state.err;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Input from "./components/input";
 import TodoItem from "./components/TodoItem";
 
@@ -12,11 +12,20 @@ function App() {
 
   // const [notify, setNotify] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setNotify(false);
-  //   }, 3000);
-  // }, []);
+  // const todoList = [
+  //   {
+  //     item: "react/redux",
+  //     done: false,
+  //     id: Date.now(),
+  //     err: true,
+  //   },
+  //   {
+  //     item: "Sass/Scss",
+  //     done: false,
+  //     id: Date.now(),
+  //     err: false,
+  //   },
+  // ];
 
   const len = todoList.length;
 
