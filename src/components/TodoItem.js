@@ -7,8 +7,6 @@ import { useDispatch } from "react-redux";
 import { deleteTodo, setCheck, hideNotification } from "../features/todoSlice";
 
 const TodoItem = ({ props }) => {
-  let res = "ToDo is not done!";
-
   const dispatch = useDispatch();
   const { item, done, id, err } = props;
 
@@ -37,7 +35,7 @@ const TodoItem = ({ props }) => {
           className="inputBox"
           onChange={handleCheck}
         />
-        <span className={err ? "notify" : "" }>{item}</span>
+        <span className={err ? "notify" : ""}>{item}</span>
       </label>
       <button type="checkbox" onClick={deleteIt}>
         <Deleteicon />

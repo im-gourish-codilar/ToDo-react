@@ -36,10 +36,10 @@ const todoSlice = createSlice({
       });
     },
 
-    hideNotification: (state,action) => {
+    hideNotification: (state, action) => {
       state.todoList.map((item) => {
         if (action.payload === item.id) {
-          item.err = false
+          item.err = false;
         }
       });
     },

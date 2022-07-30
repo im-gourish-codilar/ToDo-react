@@ -1,6 +1,6 @@
 .App {
   width: 100%;
-  max-width: 1024px ;
+  max-width: 1024px;
   margin: 0 auto;
   margin-block-start: 2rem;
 
@@ -13,8 +13,8 @@
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1;
-    color: #FFC300;
-    background-color: #001D3D;
+    color: #ffc300;
+    background-color: #001d3d;
     box-shadow: 0 1px 6px 1px #d3c578;
   }
 
@@ -24,7 +24,6 @@
     padding: 16px;
     border-radius: 8px;
     background-color: #000814;
-    // box-shadow: 0px 0px 8px 1px ;
 
     .app_todoContainer {
       display: flex;
@@ -35,7 +34,7 @@
     .notodos {
       text-align: center;
       font-weight: 700;
-      color: #FFC300;
+      color: #ffc300;
     }
   }
 }

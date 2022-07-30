@@ -14,10 +14,10 @@ const Input = () => {
 
   const addToDo = (e) => {
     e.preventDefault();
-    if ( input.length === 0 || input.trim().length === 0 ) {
+    if (input.length === 0 || input.trim().length === 0) {
       setInput("");
       setNothing("Enter a  valid ToDo...");
-    } else if ( input.length > 160 ) {
+    } else if (input.length > 160) {
       alert("Chareacters length is exceded ! ");
     } else {
       dispatch(

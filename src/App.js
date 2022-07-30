@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import Input from "./components/input";
 import TodoItem from "./components/TodoItem";
 
@@ -9,23 +8,6 @@ import "./App.scss";
 
 function App() {
   const todoList = useSelector(selectTodosList);
-
-  // const [notify, setNotify] = useState(true);
-
-  // const todoList = [
-  //   {
-  //     item: "react/redux",
-  //     done: false,
-  //     id: Date.now(),
-  //     err: true,
-  //   },
-  //   {
-  //     item: "Sass/Scss",
-  //     done: false,
-  //     id: Date.now(),
-  //     err: false,
-  //   },
-  // ];
 
   const len = todoList.length;
 
@@ -44,9 +26,6 @@ function App() {
           </div>
         )}
       </div>
-
-      {/* if user click  delete todo if  not done notify this 
-      {notify ? <h6>this is not done</h6> : <></>} */}
     </div>
   );
 }
