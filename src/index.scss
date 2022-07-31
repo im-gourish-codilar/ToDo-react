@@ -13,6 +13,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #001d3d;
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 code {
