@@ -1,0 +1,8 @@
+reference link => setLocal items from redux
+
+https://dev.to/link2twenty/react-redux-and-localstorage-2lih#:~:text=Simply%20by%20adding%20these%202,stringify(state)%3B%20localStorage.
+
+reference  link => getLocal items to redux 
+
+https://stackoverflow.com/questions/61102718/how-put-and-get-states-into-localstorage-in-redux
+

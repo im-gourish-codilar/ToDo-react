@@ -53,17 +53,19 @@
     cursor: pointer;
     outline: inherit;
 
-    &:hover {
-      svg {
-        fill: #f3cf4f;
-      }
-    }
-
     &:active {
       transform: scale(0.8);
 
       svg {
         fill: #f34b4b;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          fill: #f3cf4f;
+        }
       }
     }
   }

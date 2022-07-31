@@ -6,7 +6,9 @@ import { selectTodosList } from "./features/todoSlice";
 
 import "./App.scss";
 
+
 function App() {
+  
   const todoList = useSelector(selectTodosList);
 
   const len = todoList.length;

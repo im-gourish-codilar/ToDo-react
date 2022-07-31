@@ -1,10 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// const [todoList,setTodoList] = useState([]);
-
 const initialState = {
   todoList: [],
 };
+
+try {
+  let state = localStorage.getItem("userData");
+  if (state) {
+    initialState.todoList = JSON.parse(state /* || JSON.stringify(initialState.todoList )*/ );
+  }
+} catch (e) {
+  console.warn(e);
+}
+
+((todoList) => {
+  const userData = localStorage.getItem("todos");
+  if (userData === null) {
+    return null;
+  }
+  todoList = JSON.parse(userData);
+})();
 
 const todoSlice = createSlice({
   name: "todos",
