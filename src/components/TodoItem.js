@@ -26,7 +26,7 @@ const TodoItem = ({ props }) => {
   };
 
   return (
-    <div className="todo-item">
+    <div className={`todo-item ${err ? "notify" : ""}`}>
       <label className={` check ${done ? "strike" : "bold"}`} htmlFor={id}>
         <input
           type="checkbox"
@@ -35,7 +35,7 @@ const TodoItem = ({ props }) => {
           className="inputBox"
           onChange={handleCheck}
         />
-        <span className={err ? "notify" : ""}>{item}</span>
+        <span className={err ? "notDone" : ""}>{item}</span>
       </label>
       <button type="checkbox" onClick={deleteIt}>
         <Deleteicon />

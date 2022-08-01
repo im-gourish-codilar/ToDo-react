@@ -31,18 +31,20 @@
         color: #f34b4b;
       }
     }
+
+    &.strike {
+      text-decoration: line-through;
+      font-weight: 500;
+      color: #a19877;
+    }
+
+    &.bold {
+      font-weight: 700;
+      color: #ffc600;
+    }
   }
 
-  .strike {
-    text-decoration: line-through;
-    font-weight: 500;
-    color: #a19877;
-  }
 
-  .bold {
-    font-weight: 700;
-    color: #ffc600;
-  }
 
   button {
     background: none;
@@ -70,45 +72,57 @@
     }
   }
 
-  .notify {
-    color: #f34b4b;
+  &.notify {
+    background-color: #f34b4b;
     animation: shake 300ms;
+    transform: scale(1.2);
   }
 
   @keyframes shake {
     0% {
-      transform: translateX(0);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
     10% {
-      transform: translateX(25px);
+      transform: rotate(5deg);
+      // transform: translateY(-5px);
     }
     20% {
-      transform: translateX(0);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
     30% {
-      transform: translateX(-25px);
+      transform: rotate(-5deg);
+      // transform: translateY(5px);
     }
     40% {
-      transform: translateX(0);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
     50% {
-      transform: translateX(25px);
+      transform: rotate(5deg);
+      // transform: translateY(-5px);
     }
 
     60% {
-      transform: translateX(0px);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
     70% {
-      transform: translateX(-25px);
+      transform: rotate(-5deg);
+      // transform: translateY(5px);
     }
     80% {
-      transform: translateX(0px);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
     90% {
-      transform: translateX(-25px);
+      transform: rotate(-5deg);
+      // transform: translateY(-5px);
     }
     100% {
-      transform: translateX(0px);
+      transform: rotate(0);
+      // transform: translateY(0px);
     }
   }
 
